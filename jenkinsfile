@@ -1,0 +1,12 @@
+#!/bin/bash
+
+pipeline {
+  agent any;
+  stages {
+    stage {'BUILD'} {
+      Steps {
+        echo"this is build stage"
+      }
+    }
+  }
+}
