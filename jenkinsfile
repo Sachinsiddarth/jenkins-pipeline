@@ -1,12 +1,20 @@
-#!/bin/bash
-
 pipeline {
-  agent any;
-  stages {
-    stage {'BUILD'} {
-      Steps {
-        echo"this is build stage"
-      }
+    agent any
+    stages {
+        stage("build"){
+            steps{
+                echo "this is build stage"
+            }
+        }
+        stage("deploy"){
+            steps{
+                echo "this is deploy stage"
+            }
+        }
+        stage("test"){
+            steps{
+                echo "this is test stage"
+            }
+        }
     }
-  }
 }
